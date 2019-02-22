@@ -1,4 +1,4 @@
-Global Goal: Enterprise level lab for Security Testing
+Goal: Enterprise level lab for Security Testing
 Milestones:
 1. Setup services on r710 to emulate a router to the network
 2. Setup LXD containers with intentionally vulnerable OSes
