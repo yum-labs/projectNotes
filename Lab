@@ -1,0 +1,9 @@
+Global Goal: Enterprise level lab for Security Testing
+Milestones:
+1. Setup services on r710 to emulate a router to the network
+2. Setup Docker containers with intentional Vulnerabilities
+3. Setup Network Equipment Lab
+4. Congfigure admin portal on r710 to allow ssh to network equipment
+5. Network equipment 'states' - preconfigured network environments
+
+Emulating a network Router on a r710
