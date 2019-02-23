@@ -1,10 +1,12 @@
 Goal: Enterprise level lab for Security Testing
 Milestones:
-1. Setup services on r710 to emulate a router to the network
+1. Setup services on Dell PowerEdge R710 to emulate a router to the network
 2. Setup LXD containers with intentionally vulnerable OSes
 3. Setup Network Equipment Lab
-4. Congfigure admin portal on r710 to allow ssh to network equipment
+4. Congfigure admin portal on the Dell PowerEdge R710 to allow ssh to network equipment
 5. Network equipment 'states' - preconfigured network environments
+
+See the following Diagram for a representation of the network:
 
 +---------------+
 |   Firewall    |
@@ -25,14 +27,18 @@ Milestones:
 |   Core SVR    +----+    Lab SW2    |
 +---------------+    +---------------+
 
-
-Firewall will Tunnel through my home network to the Internet.
-Core Devices will maintain the real backend of the entire environment, and guarentee access to all devices.
-Lab Devices will have transient configs (with exception of Loopback) as needed
+The devices will provide the following functions:
+The Firewall will Tunnel through my home network to the Internet. 
+	The tunnel endpoint will most likely be a VDS, to preserve my own security.
+The Core Devices will maintain the real backend of the entire environment, and guarentee access to all devices.
+The Lab Devices will have dynamically applied configs (with exception of Loopback) as needed
 The Server will have multiple connections for distinct services:
 	Management VLAN/Network (maybe even VRF) for personal maintainance
 	User Portal to announce the current challenge and provide resources to defeat it.
-	pfSense connection that will connect the Vulnerable OS Containers to the Lab Network
+	pfSense connection that will connect the Vulnerable OS Containers to the Lab Network.
+		If possible I'd like to to represent these to the network as if they're real connections on the switch.
 
-The Management connections will ride the 'Core RTR -- Lab RTR' link,
-while the 'Core SVR -- Lab SW2' link will be used for transient connections.
+While the link functions will be:
+The Management connections will ride the 'Core RTR -- Lab RTR' link.
+The 'Core SVR -- Lab SW2' link will be used for transient connections.
+The rest of the connections will act as normal 802.1q tagged links.
