@@ -1,0 +1,18 @@
+Network Configuration:
+I think the most effective way to connect and configure the network equipment will be to use Cisco VIRL. 
+This should make it possible to manage the virtualized network equipment automatically, by using the VIRL RESTful APIs.
+Ideally it should be possible the network virtual machines are deployed with bugs and vulnerabilities.
+
+VIRL can support up to 10 Virtual Devices and can be connected to actual network equipment. 
+
+Objectives:
+*VLAN Configuration/Troubleshooting
+*OSPF Configuration/Troubleshooting
+*IPv4/IPv6 Dual Stack Configuration/Troubleshooting
+*SNMP Configuration/Troubleshooting
+*BGP Configuration/Troubleshooting
+*VRRP Configuration/Troubleshooting
+*VRF Configuration/Troubleshooting
+*AAA Server Configuration/Troubleshooting
+
+*Asynchronous Routing
